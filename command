@@ -1,0 +1,13 @@
+virt-install \
+-n centos \
+-r 1024 \
+--disk path=/dev/vg/vm-part \
+--vcpus=1 \
+--os-type linux \
+--os-variant centos7 \
+--network bridge=virbr0 \
+--graphics vnc \
+--console pty,target_type=serial \
+--location 'http://mirror.i3d.net/pub/centos/7/os/x86_64/' \
+--extra-args 'console=ttyS0,115200n8 serial ' \
+-x "ks=https://raw.githubusercontent.com/NTUwanderer/NASA_temp/master/anaconda-ks.cfg"
