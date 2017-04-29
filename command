@@ -4,7 +4,7 @@ virt-install \
 --disk path=/dev/vg/vm-part \
 --vcpus=1 \
 --os-type linux \
---os-variant centos7 \
+--os-variant rhel7 \
 --network bridge=virbr0 \
 --graphics vnc \
 --console pty,target_type=serial \
